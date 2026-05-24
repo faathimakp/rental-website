@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden">
@@ -36,9 +38,11 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <button className="rounded-2xl bg-gradient-to-r from-blue-600 via-sky-500 to-slate-900 px-8 py-4 text-lg font-bold text-white shadow-[0_0_40px_rgba(37,99,235,0.35)] transition hover:scale-105">
-              Start Riding
-            </button>
+            <Link href="#scooter-showcase" className="inline-block">
+                <button className="rounded-2xl bg-gradient-to-r from-blue-600 via-sky-500 to-slate-900 px-8 py-4 text-lg font-bold text-white shadow-[0_0_40px_rgba(37,99,235,0.35)] transition hover:scale-105">
+                  Start Riding
+                </button>
+            </Link>
           </div>
         </div>
 
