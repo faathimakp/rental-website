@@ -83,7 +83,7 @@ export default function Cards() {
                 key={index}
                 className="group overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)]"
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden ">
                   <img
                     src={scooter.image}
                     alt={scooter.name}
@@ -91,7 +91,7 @@ export default function Cards() {
                   />
     
                  <div
-  className={`absolute right-4 top-4 rounded-full px-2 py-2 text-xs font-bold text-white backdrop-blur-md ${
+  className={`absolute right-4 top-4 rounded-full px-2 py-2 text-xs font-bold  text-white backdrop-blur-md ${
     scooter.status === "Available"
       ? "bg-emerald-500/90"
       : "bg-red-500/90"
@@ -101,7 +101,7 @@ export default function Cards() {
 </div>
                 </div>
     
-                <div className="p-6">
+                <div className="p-6 bg-sky-100">
                   <div className="flex items-center justify-between gap-4">
                     <h3 className="text-2xl font-black text-slate-900">
                       {scooter.name}
