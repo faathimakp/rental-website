@@ -22,7 +22,7 @@ export default function Footer() {
 
         {/* Connect Us */}
         <div className="flex flex-col items-center gap-4 ">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] font-serif text-slate-400">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] font-normal text-slate-400">
             Connect With Us
           </p>
 

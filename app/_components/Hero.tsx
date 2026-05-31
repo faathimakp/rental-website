@@ -22,7 +22,7 @@ export default function Hero({ Vehicles }: HeroProps) {
 
   return (
     <>
-      <section className="relative flex min-h-screen items-center overflow-hidden font-serif">
+      <section className="relative flex min-h-screen items-center overflow-hidden font-normal">
         {/* Background Image */}
         <img
           src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1600&auto=format&fit=crop"
@@ -52,7 +52,7 @@ export default function Hero({ Vehicles }: HeroProps) {
               </span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-200 font-serif">
+            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-200 font-normal">
               Experience premium electric Vehicle rentals with comfort,
               performance, and instant booking for modern urban travel.
             </p>

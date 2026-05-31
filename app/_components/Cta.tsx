@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Cta() {
   return (
-    <section className="relative overflow-hidden py-28 font-serif">
+    <section className="relative overflow-hidden py-28 font-normal">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.4),transparent_35%)]" />
 
       <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[40px] border border-white/10 bg-[#0f172a] px-8 py-20 text-center shadow-2xl lg:px-20">

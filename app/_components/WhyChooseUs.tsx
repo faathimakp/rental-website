@@ -18,7 +18,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-32 font-serif">
+    <section className="relative overflow-hidden py-32 font-normal">
       {/* Background Image */}
       <img
         src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1600&auto=format&fit=crop"
