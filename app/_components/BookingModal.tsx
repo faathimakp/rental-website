@@ -24,6 +24,7 @@ export default function BookingModal({
   selectedVehicleId,
 }: BookingModalProps) {
   const [vehicleId, setVehicleId] = useState<number | null>(null);
+  const [pickupDate, setPickupDate] = useState("");
 
   useEffect(() => {
     setVehicleId(selectedVehicleId);
@@ -31,9 +32,7 @@ export default function BookingModal({
 
   if (!isOpen) return null;
 
-  const selectedVehicle = Vehicles.find(
-    (vehicle) => vehicle.id === vehicleId,
-  );
+  const selectedVehicle = Vehicles.find((vehicle) => vehicle.id === vehicleId);
 
   return (
     <div className="fixed inset-0 z-[100] overflow-y-auto bg-black/70 backdrop-blur-md">
@@ -79,7 +78,7 @@ export default function BookingModal({
 
                 formData.append(
                   "access_key",
-                  "5c1e4403-387d-4df4-a62c-3b8ac6eee549",
+                  "70c1f331-fe2f-4537-a5d4-f45fa81763c4",
                 );
 
                 formData.append(
@@ -181,9 +180,7 @@ export default function BookingModal({
                       disabled={vehicle.status !== "Available"}
                     >
                       {vehicle.name}
-                      {vehicle.status !== "Available"
-                        ? " (Unavailable)"
-                        : ""}
+                      {vehicle.status !== "Available" ? " (Unavailable)" : ""}
                     </option>
                   ))}
                 </select>
@@ -199,7 +196,9 @@ export default function BookingModal({
                   name="Pickup Date"
                   type="date"
                   required
-                  className="h-14 w-full  text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                  value={pickupDate}
+                  onChange={(e) => setPickupDate(e.target.value)}
+                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 />
               </div>
 
@@ -213,7 +212,9 @@ export default function BookingModal({
                   name="Return Date"
                   type="date"
                   required
-                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                  min={pickupDate}
+                  disabled={!pickupDate}
+                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white disabled:cursor-not-allowed disabled:bg-slate-100 sm:h-16 sm:px-5 sm:text-base"
                 />
               </div>
 
