@@ -1,17 +1,39 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
+interface Vehicle {
+  id: number;
+  name: string;
+  status: string;
+  price: string;
+  image: string;
+}
+
 interface BookingModalProps {
   isOpen: boolean;
   onClose: () => void;
-  scooterName?: string;
+  Vehicles: Vehicle[];
+  selectedVehicleId: number | null;
 }
 
 export default function BookingModal({
   isOpen,
   onClose,
-  scooterName,
+  Vehicles,
+  selectedVehicleId,
 }: BookingModalProps) {
+  const [vehicleId, setVehicleId] = useState<number | null>(null);
+
+  useEffect(() => {
+    setVehicleId(selectedVehicleId);
+  }, [selectedVehicleId]);
+
   if (!isOpen) return null;
+
+  const selectedVehicle = Vehicles.find(
+    (vehicle) => vehicle.id === vehicleId,
+  );
 
   return (
     <div className="fixed inset-0 z-[100] overflow-y-auto bg-black/70 backdrop-blur-md">
@@ -38,7 +60,7 @@ export default function BookingModal({
               </span>
 
               <h2 className="mt-5 text-3xl font-black leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
-                Rent Your Best Scooter
+                Rent Your Best Vehicle
               </h2>
 
               <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-500 sm:text-base lg:text-lg">
@@ -62,7 +84,7 @@ export default function BookingModal({
 
                 formData.append(
                   "subject",
-                  `New Booking Request - ${scooterName}`,
+                  `New Booking Request - ${selectedVehicle?.name || ""}`,
                 );
 
                 const object = Object.fromEntries(formData);
@@ -94,9 +116,6 @@ export default function BookingModal({
               }}
               className="grid gap-5 sm:gap-6 lg:grid-cols-2 xl:grid-cols-4"
             >
-              {/* Your Web3Forms Access Key */}
-
-              {/* Email Subject */}
               {/* Name */}
               <div>
                 <label className="mb-2 block text-sm font-semibold text-slate-800 sm:text-base">
@@ -142,17 +161,32 @@ export default function BookingModal({
                 />
               </div>
 
-              {/* Vehicle */}
+              {/* Vehicle Dropdown */}
               <div>
                 <label className="mb-2 block text-sm font-semibold text-slate-800 sm:text-base">
                   Vehicle
                 </label>
 
-                <input
-                  value={scooterName}
-                  readOnly
-                  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-100 px-4 text-sm text-slate-700 outline-none sm:h-16 sm:px-5 sm:text-base"
-                />
+                <select
+                  name="Vehicle"
+                  value={vehicleId ?? ""}
+                  onChange={(e) => setVehicleId(Number(e.target.value))}
+                  required
+                  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                >
+                  {Vehicles.map((vehicle) => (
+                    <option
+                      key={vehicle.id}
+                      value={vehicle.id}
+                      disabled={vehicle.status !== "Available"}
+                    >
+                      {vehicle.name}
+                      {vehicle.status !== "Available"
+                        ? " (Unavailable)"
+                        : ""}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               {/* Pickup Date */}
@@ -207,10 +241,11 @@ export default function BookingModal({
                   type="submit"
                   className="h-14 w-full rounded-2xl bg-gradient-to-r from-blue-600 to-slate-900 text-sm font-bold text-white shadow-xl transition duration-300 hover:scale-[1.02] sm:h-16 sm:text-base"
                 >
-                  Book Scooter Now
+                  Book Vehicle Now
                 </button>
               </div>
             </form>
+
             {/* Bottom Steps */}
             <div className="mt-10 rounded-[24px] bg-[#071133] px-5 py-6 sm:px-8 lg:mt-14">
               <div className="grid gap-6 text-center text-white lg:grid-cols-3">

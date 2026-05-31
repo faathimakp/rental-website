@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RoaM - Premium Scooter Rentals",
-  description: "Premium Scooter Rental Platform",
+  title: "RoaM - Premium Vehicle Rentals",
+  description: "Premium Vehicle Rental Platform",
 };
 
 export default function RootLayout({

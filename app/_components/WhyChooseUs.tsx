@@ -3,12 +3,12 @@ export default function WhyChooseUs() {
     {
       icon: "⚡",
       title: "Instant Booking",
-      desc: "Book your scooter within seconds with a smooth and hassle-free process.",
+      desc: "Book your Vehicle within seconds with a smooth and hassle-free process.",
     },
     {
       icon: "🛵",
       title: "Premium Fleet",
-      desc: "Ride stylish, comfortable, and well-maintained electric scooters.",
+      desc: "Ride stylish, comfortable, and well-maintained electric Vehicles.",
     },
     {
       icon: "☎️",
@@ -18,11 +18,11 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-32">
+    <section className="relative overflow-hidden py-32 font-serif">
       {/* Background Image */}
       <img
         src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1600&auto=format&fit=crop"
-        alt="Scooter"
+        alt="Vehicle"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
@@ -40,11 +40,11 @@ export default function WhyChooseUs() {
           </span>
 
           <h2 className="mt-8 text-5xl font-black text-white lg:text-6xl">
-            Premium Scooter Rental Experience
+            Premium Vehicle Rental Experience
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-            Fast, affordable, and reliable scooter rentals designed for modern
+            Fast, affordable, and reliable Vehicle rentals designed for modern
             city travel.
           </p>
         </div>
