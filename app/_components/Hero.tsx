@@ -44,7 +44,7 @@ export default function Hero({ Vehicles }: HeroProps) {
               ⚡ Fast Booking • Premium Electric Vehicles
             </div>
 
-            <h1 className="mt-8 text-6xl font-black leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl font-serif">
+            <h1 className="mt-8 text-6xl font-black leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl font-normal">
               Ride Beyond
               <span className="bg-gradient-to-r from-blue-500 via-sky-400 to-white bg-clip-text text-transparent">
                 {" "}

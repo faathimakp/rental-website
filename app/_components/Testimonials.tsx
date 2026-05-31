@@ -46,7 +46,7 @@ export default function Testimonials() {
     </span>
   </div>
 </div>
-            <h2 className="mt-6 text-5xl font-black text-slate-900 font-serif" >
+            <h2 className="mt-6 text-5xl font-normal text-slate-900 font-serif" >
               What Our Riders Say
             </h2>
 

@@ -13,7 +13,7 @@ export default function Cta() {
             Premium Urban Mobility
           </span>
 
-          <h2 className="mt-8 text-5xl font-black leading-tight text-white lg:text-6xl">
+          <h2 className="mt-8 text-5xl font-normal leading-tight text-white lg:text-6xl">
             Ready to Hit the Road?
           </h2>
 

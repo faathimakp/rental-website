@@ -39,7 +39,7 @@ export default function WhyChooseUs() {
             Why Choose Us
           </span>
 
-          <h2 className="mt-8 text-5xl font-black text-white lg:text-6xl">
+          <h2 className="mt-8 text-5xl  font-normal text-white lg:text-6xl">
             Premium Vehicle Rental Experience
           </h2>
 

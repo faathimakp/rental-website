@@ -32,7 +32,7 @@ export default function Cards({
   return (
     <>
       <section
-        className="mx-auto max-w-7xl px-6 py-24 lg:px-12 font-serif"
+        className="mx-auto max-w-7xl px-6 py-24 lg:px-12 font-normal"
         id="Vehicle-showcase"
       >
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
