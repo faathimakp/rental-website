@@ -66,7 +66,7 @@ export default function Hero({ Vehicles }: HeroProps) {
               </button> */}
               <button
                 onClick={() => setOpen(true)}
-                className="rounded-2xl bg-gradient-to-r bg-sky-600 text-white px-8 py-4 text-lg font-bold text-white shadow-[0_0_40px_rgba(37,99,235,0.35)] transition hover:scale-105"
+                className=" rounded-xl md:rounded-2xl bg-gradient-to-r bg-sky-600 text-white px-6 md:px-8 py-2 md:py-4 text-lg font-bold text-white shadow-[0_0_40px_rgba(37,99,235,0.35)] transition hover:scale-105"
               >
                Rent Now
               </button>

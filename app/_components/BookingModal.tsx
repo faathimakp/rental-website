@@ -63,7 +63,7 @@ export default function BookingModal({
                 Rent Your Best Vehicle
               </h2>
 
-              <p className="mt-4 max-w-2xl text-sm leading-5 md:leading-7 text-slate-500 sm:text-base lg:text-lg">
+              <p className=" mt-3 md:mt-4 max-w-2xl text-sm leading-5 md:leading-7 text-slate-500 sm:text-base lg:text-lg">
                 Complete the booking form and we’ll contact you instantly.
               </p>
             </div>
@@ -127,7 +127,7 @@ export default function BookingModal({
                   type="text"
                   placeholder="Your Name"
                   required
-                  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 />
               </div>
 
@@ -142,7 +142,7 @@ export default function BookingModal({
                   type="email"
                   placeholder="Your Email"
                   required
-                  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 />
               </div>
 
@@ -157,7 +157,7 @@ export default function BookingModal({
                   type="tel"
                   placeholder="Telephone"
                   required
-                  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 />
               </div>
 
@@ -172,7 +172,7 @@ export default function BookingModal({
                   value={vehicleId ?? ""}
                   onChange={(e) => setVehicleId(Number(e.target.value))}
                   required
-                  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 >
                   {Vehicles.map((vehicle) => (
                     <option
@@ -199,7 +199,7 @@ export default function BookingModal({
                   name="Pickup Date"
                   type="date"
                   required
-                  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                  className="h-14 w-full  text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 />
               </div>
 
@@ -213,7 +213,7 @@ export default function BookingModal({
                   name="Return Date"
                   type="date"
                   required
-                  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 />
               </div>
 
@@ -226,7 +226,7 @@ export default function BookingModal({
                 <select
                   name="Location"
                   required
-                  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 >
                   <option value="">Select Location</option>
                   <option>Kochi</option>
