@@ -76,8 +76,11 @@ const Vehicles = [
   },
 ];
 export default function ShowcasePage() {
-  return <Cards
-  Vehicles={Vehicles}
-  title="Premium Vehicle Fleet"
-/>;
+  return <div className="py-14 md:py-18">
+    <Cards
+    Vehicles={Vehicles}
+    title="Premium Vehicle Fleet"
+    
+  />;
+  return </div>
 }

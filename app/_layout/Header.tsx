@@ -12,7 +12,7 @@ export default function Header() {
           </h3>
 
        <Link href={"/showcase"}>
-            <button className="rounded-full font-normal border border-blue-700 bg-blue-50 px-6 py-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-700 hover:text-white">
+            <button className="rounded-full font-normal border border-blue-700 bg-blue-50 px-3.5 md:px-6 py-1.5 md:py-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-700 hover:text-white">
               Book Ride
             </button>
        </Link>

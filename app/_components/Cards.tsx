@@ -32,30 +32,30 @@ export default function Cards({
   return (
     <>
       <section
-        className="mx-auto max-w-7xl px-6 py-24 lg:px-12 font-normal"
+        className="mx-auto max-w-7xl px-6  py-16 md:py-24 lg:px-12 font-normal"
         id="Vehicle-showcase"
       >
-        <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
+        <div className="flex flex-col items-start justify-between gap-4 md:gap-8 lg:flex-row lg:items-end">
           <div>
-            <span className="rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
+            <span className="rounded-full  border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-medium text-blue-700">
               Premium Fleet
             </span>
 
-            <h2 className="mt-6 text-5xl font-black text-slate-900">
+            <h2 className="mt-6 text-3xl md:text-5xl font-black text-slate-900">
               {title}
             </h2>
           </div>
 
           {showButton && (
             <Link href="/showcase">
-              <button className="rounded-full border border-blue-700 bg-blue-50 px-6 py-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-700 hover:text-white">
+              <button className="rounded-full border border-blue-700 bg-blue-50 px-4 md:px-6 py-1.5 md:py-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-700 hover:text-white">
                 explore all Vehicles
               </button>
             </Link>
           )}
         </div>
 
-        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+        <div className="mt-12 md:mt-16 grid gap-6 md:gap-8 lg:grid-cols-3">
           {Vehicles.map((Vehicle) => (
             <div
               key={Vehicle.id}
@@ -69,7 +69,7 @@ export default function Cards({
                 />
 
                 <div
-                  className={`absolute right-4 top-4 rounded-full px-2 py-2 text-xs font-bold text-white backdrop-blur-md ${
+                  className={`absolute right-4 top-4 rounded-full px-2 py-1 md:py-2 text-xs font-bold text-white backdrop-blur-md ${
                     Vehicle.status === "Available"
                       ? "bg-emerald-500/90"
                       : "bg-red-500/90"
@@ -79,18 +79,18 @@ export default function Cards({
                 </div>
               </div>
 
-              <div className="p-6 bg-sky-100">
+              <div className=" p-4 md:p-6 bg-sky-100">
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className="text-2xl font-black text-slate-900">
+                  <h3 className=" text-xl md:text-2xl font-black text-slate-900">
                     {Vehicle.name}
                   </h3>
 
-                  <span className="rounded-full bg-gradient-to-r from-blue-600 to-slate-900 px-3 py-1.5 text-xs font-bold text-white shadow-lg">
+                  <span className="rounded-full bg-gradient-to-r from-blue-600 to-slate-900 px-2 md:px-3 py-1 md:py-1.5 text-xs font-bold text-white shadow-lg">
                     {Vehicle.price}
                   </span>
                 </div>
 
-                <p className="mt-4 text-sm leading-7 text-slate-500">
+                <p className="mt-4 text-sm leading-5 md:leading-7 text-slate-500">
                   Designed for comfort, performance, and smooth urban commuting.
                 </p>
 
@@ -102,7 +102,7 @@ export default function Cards({
                     }
                   }}
                   disabled={Vehicle.status !== "Available"}
-                  className={`mt-6 w-full rounded-2xl px-5 py-3 text-base font-bold text-white transition duration-300 ${
+                  className={`mt-6 w-full rounded-xl md:rounded-2xl px-2 md:px-5 py-1.5 md:py-3 text-base font-bold text-white transition duration-300 ${
                     Vehicle.status === "Available"
                       ? "bg-slate-900 hover:bg-blue-700"
                       : "cursor-not-allowed bg-slate-300"

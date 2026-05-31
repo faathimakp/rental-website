@@ -26,7 +26,7 @@ export default function Testimonials() {
   
 
       {/* Testimonials */}
-      <section className="bg-gradient-to-br from-blue-500/10 via-transparent to-slate-900/40 py-24">
+      <section className="bg-gradient-to-br from-blue-500/10 via-transparent to-slate-900/40 py-16 md:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="mb-16 text-center">
           <div className="flex justify-center px-4">
@@ -46,40 +46,40 @@ export default function Testimonials() {
     </span>
   </div>
 </div>
-            <h2 className="mt-6 text-5xl font-normal text-slate-900 font-normal" >
+            <h2 className="mt-6 text-3xl md:text-5xl font-normal text-slate-900 font-normal" >
               What Our Riders Say
             </h2>
 
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-8 text-slate-500  font-normal">
+            <p className="mx-auto mt-3 md:mt-5 max-w-2xl text-shadow-lg md:text-lg leading-6 md:leading-8 text-slate-500  font-normal">
               Trusted by customers for premium Vehicle rentals and reliable service.
             </p>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-3">
+          <div className="grid gap-4 md:gap-8 lg:grid-cols-3">
             {reviews.map((review) => (
               <div
                 key={review.id}
-                className="rounded-[32px]  font-normal border border-slate-200 bg-white p-8 shadow-[0_10px_40px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-2"
+                className="rounded-[32px]  font-normal border border-slate-200 bg-white p-5 md:p-8 shadow-[0_10px_40px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-2"
               >
                 <div className="mb-5 flex items-center gap-1 text-2xl text-yellow-400">
                   ★ ★ ★ ★ ★
                 </div>
 
-                <p className="text-base leading-8 text-slate-600">
+                <p className="text-base leading-6 md:leading-8 text-slate-600">
                   “{review.review}”
                 </p>
 
-                <div className="mt-8 flex items-center gap-4">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-r bg-sky-600 text-lg font-bold text-white">
+                <div className=" mt-4 md:mt-8 flex items-center gap-3 md:gap-4">
+                  <div className="flex h-9 w-9 md:h-14 md:w-14 items-center justify-center rounded-full bg-gradient-to-r bg-sky-600 text-shadow-lg md:text-lg font-bold text-white">
                     {review.name.charAt(0)}
                   </div>
 
                   <div>
-                    <h4 className="text-lg font-bold text-slate-900">
+                    <h4 className=" text-shadow-lg md:text-lg font-bold text-slate-900">
                       {review.name}
                     </h4>
 
-                    <p className="text-sm text-slate-500">
+                    <p className=" text-sm text-slate-500">
                       Verified Google Review
                     </p>
                   </div>

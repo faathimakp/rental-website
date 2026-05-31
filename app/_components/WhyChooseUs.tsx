@@ -18,7 +18,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="relative overflow-hidden py-32 font-normal">
+    <section className="relative overflow-hidden py-16 md:py-32 font-normal">
       {/* Background Image */}
       <img
         src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?q=80&w=1600&auto=format&fit=crop"
@@ -39,22 +39,22 @@ export default function WhyChooseUs() {
             Why Choose Us
           </span>
 
-          <h2 className="mt-8 text-5xl  font-normal text-white lg:text-6xl">
+          <h2 className="mt-8 text-3xl md:text-5xl  font-normal text-white lg:text-6xl">
             Premium Vehicle Rental Experience
           </h2>
 
-          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+          <p className="mx-auto mt-6 max-w-3xl text-shadow-lg md:text-lg leading-6 md:leading-8 text-slate-300">
             Fast, affordable, and reliable Vehicle rentals designed for modern
             city travel.
           </p>
         </div>
 
         {/* Feature Cards */}
-        <div className="mt-24 grid gap-8 lg:grid-cols-3">
+        <div className=" mt-14 md:mt-24 grid gap-8 lg:grid-cols-3">
           {features.map((item, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-[34px] border border-white/10 bg-white p-8 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-3 hover:border-blue-400/40 hover:shadow-[0_25px_80px_rgba(37,99,235,0.18)]"
+              className="group relative overflow-hidden rounded-[34px] border border-white/10 bg-white  p-4 md:p-8 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-3 hover:border-blue-400/40 hover:shadow-[0_25px_80px_rgba(37,99,235,0.18)]"
             >
               {/* Card Glow */}
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-500/10 blur-3xl transition duration-500 group-hover:bg-blue-500/20" />
@@ -64,17 +64,17 @@ export default function WhyChooseUs() {
 
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-600 to-slate-900 text-3xl text-white shadow-2xl">
+                <div className="flex h-11 md:h-16 w-11 md:w-16 items-center justify-center rounded-xl md:rounded-3xl bg-gradient-to-br from-blue-600 to-slate-900 text-2xl md:text-3xl text-white shadow-2xl">
                   {item.icon}
                 </div>
 
                 {/* Title */}
-                <h3 className="mt-8 text-3xl font-black text-slate-900">
+                <h3 className=" mt-4 md:mt-8 text-2xl md:text-3xl font-black text-slate-900">
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="mt-4 leading-8 text-slate-600">
+                <p className="mt-3 md:mt-4 leading-6 md:leading-8 text-slate-600">
                   {item.desc}
                 </p>
 

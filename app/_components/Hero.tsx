@@ -37,10 +37,10 @@ export default function Hero({ Vehicles }: HeroProps) {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.25),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.2),transparent_35%)]" />
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-between gap-16 px-6 py-32 lg:flex-row lg:items-center lg:px-12">
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-between gap-12 md:gap-16 px-6 py-32 lg:flex-row lg:items-center lg:px-12">
           {/* Left */}
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/10 px-5 py-2 text-sm text-white backdrop-blur-xl">
+            <div className="inline-flex items-center gap-2 md:gap-3 rounded-full border border-white/10 bg-white/10 px-3 md:px-5 py-1 md:py-2 text-sm text-white backdrop-blur-xl">
               ⚡ Fast Booking • Premium Electric Vehicles
             </div>
 
@@ -52,18 +52,18 @@ export default function Hero({ Vehicles }: HeroProps) {
               </span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-slate-200 font-normal">
+            <p className=" mt-6 md:mt-8 max-w-xl text-lg leading-7 md:leading-8 text-slate-200 font-normal">
               Experience premium electric Vehicle rentals with comfort,
               performance, and instant booking for modern urban travel.
             </p>
 
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-               <button
+            <div className="mt-8 ">
+               {/* <button
                
                 className="rounded-2xl bg-gradient-to-r text-white px-8 py-4 text-lg font-bold bg-sky-600 shadow-[0_0_40px_rgba(37,99,235,0.35)] transition hover:scale-105"
               >
                 Start Riding
-              </button>
+              </button> */}
               <button
                 onClick={() => setOpen(true)}
                 className="rounded-2xl bg-gradient-to-r bg-sky-600 text-white px-8 py-4 text-lg font-bold text-white shadow-[0_0_40px_rgba(37,99,235,0.35)] transition hover:scale-105"
@@ -75,7 +75,7 @@ export default function Hero({ Vehicles }: HeroProps) {
 
           {/* Right Cards */}
           <div className="flex flex-col gap-6">
-            <div className=" w-[250px] md:w-[300px] rounded-[32px] border border-white/10 bg-white/10 p-8 backdrop-blur-2xl">
+            <div className=" w-[250px] md:w-[300px] rounded-[32px] border border-white/10 bg-white/10 p-4 md:p-8 backdrop-blur-2xl">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm text-slate-300">Support</p>
@@ -94,7 +94,7 @@ export default function Hero({ Vehicles }: HeroProps) {
               </p>
             </div>
 
-            <div className="w-[250px] md:w-[300px] rounded-[32px] border border-white/10 bg-white/10 p-8 backdrop-blur-2xl">
+            <div className="w-[250px] md:w-[300px] rounded-[32px] border border-white/10 bg-white/10 p-4 md:p-8 backdrop-blur-2xl">
               <p className="text-sm text-slate-300">Available Vehicles</p>
 
               <h3 className="mt-2 text-5xl font-black text-white">20+</h3>

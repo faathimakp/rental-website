@@ -59,11 +59,11 @@ export default function BookingModal({
                 Premium Booking
               </span>
 
-              <h2 className="mt-5 text-3xl font-black leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
+              <h2 className="mt-5 text-2xl font-black leading-tight text-slate-900 sm:text-4xl lg:text-5xl">
                 Rent Your Best Vehicle
               </h2>
 
-              <p className="mt-4 max-w-2xl text-sm leading-7 text-slate-500 sm:text-base lg:text-lg">
+              <p className="mt-4 max-w-2xl text-sm leading-5 md:leading-7 text-slate-500 sm:text-base lg:text-lg">
                 Complete the booking form and we’ll contact you instantly.
               </p>
             </div>
@@ -250,7 +250,7 @@ export default function BookingModal({
             <div className="mt-10 rounded-[24px] bg-[#071133] px-5 py-6 sm:px-8 lg:mt-14">
               <div className="grid gap-6 text-center text-white lg:grid-cols-3">
                 <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                  <span className="text-4xl font-black text-blue-400 sm:text-5xl">
+                  <span className=" text-3xl md:text-4xl  font-black text-blue-400 sm:text-5xl">
                     01.
                   </span>
 
@@ -260,7 +260,7 @@ export default function BookingModal({
                 </div>
 
                 <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                  <span className="text-4xl font-black text-blue-400 sm:text-5xl">
+                  <span className=" text-3xl md:text-4xl  font-black text-blue-400 sm:text-5xl">
                     02.
                   </span>
 
@@ -270,7 +270,7 @@ export default function BookingModal({
                 </div>
 
                 <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-                  <span className="text-4xl font-black text-blue-400 sm:text-5xl">
+                  <span className=" text-3xl md:text-4xl font-black text-blue-400 sm:text-5xl">
                     03.
                   </span>
 
