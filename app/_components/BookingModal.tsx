@@ -23,16 +23,16 @@ export default function BookingModal({
   Vehicles,
   selectedVehicleId,
 }: BookingModalProps) {
-  const [vehicleId, setVehicleId] = useState<number | null>(null);
+  const [vehicleName, setVehicleName] = useState("");
   const [pickupDate, setPickupDate] = useState("");
 
   useEffect(() => {
-    setVehicleId(selectedVehicleId);
-  }, [selectedVehicleId]);
+    const vehicle = Vehicles.find((v) => v.id === selectedVehicleId);
+
+    setVehicleName(vehicle?.name || "");
+  }, [selectedVehicleId, Vehicles]);
 
   if (!isOpen) return null;
-
-  const selectedVehicle = Vehicles.find((vehicle) => vehicle.id === vehicleId);
 
   return (
     <div className="fixed inset-0 z-[100] overflow-y-auto bg-black/70 backdrop-blur-md">
@@ -83,11 +83,10 @@ export default function BookingModal({
 
                 formData.append(
                   "subject",
-                  `New Booking Request - ${selectedVehicle?.name || ""}`,
+                  `New Booking Request - ${vehicleName}`,
                 );
 
                 const object = Object.fromEntries(formData);
-                const json = JSON.stringify(object);
 
                 const response = await fetch(
                   "https://api.web3forms.com/submit",
@@ -97,7 +96,7 @@ export default function BookingModal({
                       "Content-Type": "application/json",
                       Accept: "application/json",
                     },
-                    body: json,
+                    body: JSON.stringify(object),
                   },
                 );
 
@@ -107,6 +106,14 @@ export default function BookingModal({
                   alert("Booking request sent successfully!");
 
                   form.reset();
+
+                  setPickupDate("");
+
+                  const vehicle = Vehicles.find(
+                    (v) => v.id === selectedVehicleId,
+                  );
+
+                  setVehicleName(vehicle?.name || "");
 
                   onClose();
                 } else {
@@ -168,15 +175,15 @@ export default function BookingModal({
 
                 <select
                   name="Vehicle"
-                  value={vehicleId ?? ""}
-                  onChange={(e) => setVehicleId(Number(e.target.value))}
+                  value={vehicleName}
+                  onChange={(e) => setVehicleName(e.target.value)}
                   required
                   className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-700 outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 >
                   {Vehicles.map((vehicle) => (
                     <option
                       key={vehicle.id}
-                      value={vehicle.id}
+                      value={vehicle.name}
                       disabled={vehicle.status !== "Available"}
                     >
                       {vehicle.name}
@@ -185,7 +192,6 @@ export default function BookingModal({
                   ))}
                 </select>
               </div>
-
               {/* Pickup Date */}
               <div>
                 <label className="mb-2 block text-sm font-semibold text-slate-800 sm:text-base">
@@ -226,13 +232,12 @@ export default function BookingModal({
 
                 <select
                   name="Location"
+                  defaultValue="Kannur"
                   required
                   className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
                 >
-                  <option value="">Select Location</option>
-                  <option>Kochi</option>
-                  <option>Calicut</option>
-                  <option>Trivandrum</option>
+                  <option value="Kannur">Kannur</option>
+                  <option value="Thalassery">Thalassery</option>
                 </select>
               </div>
 
