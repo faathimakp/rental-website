@@ -44,12 +44,12 @@ const Vehicles = [
     status: "Not Available",
     price: "₹799/day",
     image:
-      "https://safcobikerentalinkerala.in/wp-content/uploads/2025/07/TVS-Jupiter-2023.png",
+     "https://safcobikerentalinkerala.in/wp-content/uploads/2025/07/Honda-Unicorn-2025.png",
   },
   {
     id: 6,
-    name: "Royal enfield ",
-    status: "Available",
+    name: "Royal enfield Suzuki access 125",
+    status: "Not Available",
     price: "₹1299/day",
     image:
       "https://safcobikerentalinkerala.in/wp-content/uploads/2025/07/Suzuki-Access-125.png",

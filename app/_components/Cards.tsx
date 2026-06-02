@@ -62,7 +62,7 @@ export default function Cards({
               key={Vehicle.id}
               className="group overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)]"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative overflow-hidden bg-sky-100">
                 <img
                   src={Vehicle.image}
                   alt={Vehicle.name}
@@ -80,7 +80,7 @@ export default function Cards({
                 </div>
               </div>
 
-              <div className=" p-4 md:p-6 bg-sky-100">
+              <div className=" p-4 md:p-6 ">
                 <div className="flex items-center justify-between gap-4">
                   <h3 className=" text-xl md:text-2xl font-black text-slate-900">
                     {Vehicle.name}
