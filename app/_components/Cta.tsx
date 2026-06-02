@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export default function Cta() {
+ 
   return (
     <section className="relative overflow-hidden py-14 md:py-28 font-normal">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.18),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.4),transparent_35%)]" />

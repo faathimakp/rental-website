@@ -1,3 +1,6 @@
+import {
+  CheckCircleIcon,
+} from "@heroicons/react/24/solid";
 
 export default function Testimonials() {
   const reviews = [
@@ -20,38 +23,74 @@ export default function Testimonials() {
         "I booked  access 125cc for my 2day kannur trip. It was great. scooty was in a decent condition",
     },
   ];
+   const terms = [
+  "Daily Usage Limit: 150 km per day. Excess km charge: ₹4/km for Scooters and ₹5/km for Bikes.",
+  "Fuel costs are not included in the rental price.",
+  "Minimum rental period is 24 hours.",
+  "Original Driving License and valid ID proof are required at pickup.",
+  "Late returns beyond the agreed time will incur additional charges.",
+  "Any damage to the vehicle will be charged as per actual repair cost.",
+  "One helmet is provided per booking. Additional helmets are available on request.",
+  "All rental rates include applicable GST.",
+  "Anyone with a valid driving license can rent vehicles below 150cc. Minimum age: 21 years for bikes above 150cc and 23 years for bikes above 350cc.",
+  "Full rental amount must be paid in advance along with a refundable security deposit.",
+];
 
   return (
     <>
-  
-
-      {/* Testimonials */}
+     
       <section className="bg-gradient-to-br from-blue-500/10 via-transparent to-slate-900/40 py-16 md:py-24">
+     
+             {/* Terms & Conditions */}
+
+      
+          <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <div className="mb-12  overflow-hidden rounded-[32px] border border-slate-200 bg-blue-50 shadow-xl">
+              <div className="border-l-4 border-blue-600 bg-sky-100 px-6 py-5 md:px-8">
+                <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+                  Rental Terms & Conditions
+                </h2>
+              </div>
+    
+              <div className="space-y-5 p-6 md:p-8">
+                {terms.map((term, index) => (
+                  <div key={index} className="flex gap-4">
+                    <CheckCircleIcon className="mt-1 h-6 w-6 flex-shrink-0 text-blue-600" />
+                    <p className="text-base leading-7 text-slate-700">{term}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div >
+      
+
+       {/* Testimonials */}
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="mb-16 text-center">
-          <div className="flex justify-center px-4">
-  <div className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm sm:gap-3 sm:px-5 sm:text-sm">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
-      alt="Google"
-      className="h-4 w-4 sm:h-5 sm:w-5"
-    />
+            <div className="flex justify-center px-4">
+              <div className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-sm sm:gap-3 sm:px-5 sm:text-sm">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                  alt="Google"
+                  className="h-4 w-4 sm:h-5 sm:w-5"
+                />
 
-    <span className="font-bold text-slate-900">5.0</span>
+                <span className="font-bold text-slate-900">5.0</span>
 
-    <span className="text-yellow-400">★★★★★</span>
+                <span className="text-yellow-400">★★★★★</span>
 
-    <span className="text-slate-500 whitespace-nowrap">
-      (100 reviews)
-    </span>
-  </div>
-</div>
-            <h2 className="mt-6 text-3xl md:text-5xl font-normal text-slate-900 font-normal" >
+                <span className="text-slate-500 whitespace-nowrap">
+                  (100 reviews)
+                </span>
+              </div>
+            </div>
+            <h2 className="mt-6 text-3xl md:text-5xl font-normal text-slate-900 font-normal">
               What Our Riders Say
             </h2>
 
             <p className="mx-auto mt-3 md:mt-5 max-w-2xl text-shadow-lg md:text-lg leading-6 md:leading-8 text-slate-500  font-normal">
-              Trusted by customers for premium Vehicle rentals and reliable service.
+              Trusted by customers for premium Vehicle rentals and reliable
+              service.
             </p>
           </div>
 
@@ -88,21 +127,18 @@ export default function Testimonials() {
             ))}
           </div>
         </div>
-        
       </section>
-       <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62868.43384806196!2d76.2673042!3d9.9312328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d3e5f5f5f5f%3A0x1234567890abcdef!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
-            width="100%"
-            height="400"
-            loading="lazy"
-            allowFullScreen
-            referrerPolicy="no-referrer-when-downgrade"
-            className="border-0"
-          />
+
+      {/* map */}
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62868.43384806196!2d76.2673042!3d9.9312328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d3e5f5f5f5f%3A0x1234567890abcdef!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+        width="100%"
+        height="400"
+        loading="lazy"
+        allowFullScreen
+        referrerPolicy="no-referrer-when-downgrade"
+        className="border-0"
+      />
     </>
   );
 }
-
-
-
-
