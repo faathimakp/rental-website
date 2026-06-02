@@ -29,6 +29,7 @@ export default function Cards({
     null,
   );
 
+
   return (
     <>
       <section
@@ -84,6 +85,7 @@ export default function Cards({
                   <h3 className=" text-xl md:text-2xl font-black text-slate-900">
                     {Vehicle.name}
                   </h3>
+                  
 
                   <span className="rounded-full bg-gradient-to-r from-blue-600 to-slate-900 px-2 md:px-3 py-1 md:py-1.5 text-xs font-bold text-white shadow-lg">
                     {Vehicle.price}
@@ -93,6 +95,7 @@ export default function Cards({
                 <p className="mt-4 text-sm leading-5 md:leading-7 text-slate-500">
                   Designed for comfort, performance, and smooth urban commuting.
                 </p>
+                
 
                 <button
                   onClick={() => {

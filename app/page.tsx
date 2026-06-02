@@ -8,25 +8,25 @@ import WhyChooseUs from "./_components/WhyChooseUs";
 const Vehicles = [
   {
     id: 1,
-    name: "Neo Rider",
+    name: "Honda activa",
     status: "Available",
-    price: "₹499/day",
+    price: "₹799/day",
     image:
       "https://safcobikerentalinkerala.in/wp-content/uploads/2025/07/Suzuki-Access-125.png",
   },
   {
     id: 2,
-    name: "Volt X",
+    name: "Honda dio",
     status: "Available",
-    price: "₹699/day",
+    price: "₹799/day",
     image:
       "https://safcobikerentalinkerala.in/wp-content/uploads/2025/07/Suzuki-AccessJupiter-2024.png",
   },
   {
     id: 3,
-    name: "Urban Jet",
+    name: "Bajaj NS",
     status: "Available",
-    price: "₹599/day",
+    price: "₹999/day",
     image:
       "https://safcobikerentalinkerala.in/wp-content/uploads/2025/07/01-4.png",
   },
@@ -34,23 +34,23 @@ const Vehicles = [
     id: 4,
     name: "Honda Unicorn",
     status: "Available",
-    price: "₹599/day",
+    price: "₹999/day",
     image:
       "https://safcobikerentalinkerala.in/wp-content/uploads/2025/07/Honda-Unicorn-2025.png",
   },
   {
     id: 5,
-    name: "TVS Jupiter",
+    name: "Suzuki access 125",
     status: "Not Available",
-    price: "₹599/day",
+    price: "₹799/day",
     image:
       "https://safcobikerentalinkerala.in/wp-content/uploads/2025/07/TVS-Jupiter-2023.png",
   },
   {
     id: 6,
-    name: "Suzuki Access",
+    name: "Royal enfield ",
     status: "Available",
-    price: "₹599/day",
+    price: "₹1299/day",
     image:
       "https://safcobikerentalinkerala.in/wp-content/uploads/2025/07/Suzuki-Access-125.png",
   },

@@ -24,9 +24,9 @@ export default function Testimonials() {
     },
   ];
    const terms = [
-  "Daily Usage Limit: 150 km per day. Excess km charge: ₹4/km for Scooters and ₹5/km for Bikes.",
+ 
   "Fuel costs are not included in the rental price.",
-  "Minimum rental period is 24 hours.",
+ 
   "Original Driving License and valid ID proof are required at pickup.",
   "Late returns beyond the agreed time will incur additional charges.",
   "Any damage to the vehicle will be charged as per actual repair cost.",
