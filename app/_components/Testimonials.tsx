@@ -126,6 +126,17 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
+        <div className="mt-10 md:mt-14 flex justify-center">
+  <a
+    href="https://www.google.com/search?num=10&sca_esv=a4f5fd6faf7ec072&sxsrf=ANbL-n4rpqN-VHIjP88fvWZL02UYGRyzRw:1780400556731&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZxKMu_6d5GlZEnLQXobvfQQ55wpO3qItSQTMvHDkDZN3Q8wtLubxGOiSPy3KKDhaT-cKssygl-mjXQJySWuBHsFmmFkEnRspQXQlNXV00Wz389kC66iRWedgzt_PZrwu8lyaWA%3D&q=Roam+kannur+bike+%26+scooter+rentals+in+kannur+Reviews&sa=X&ved=2ahUKEwilq_f1vOiUAxXre2wGHT0UI4wQ0bkNegQIQxAF&biw=1470&bih=798&dpr=2"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-full border border-sky-600 bg-white px-6 py-3 font-semibold text-sky-600 shadow-sm transition-all duration-300 hover:bg-sky-600 hover:text-white hover:shadow-lg"
+  >
+    View All Google Reviews
+    <span>→</span>
+  </a>
+</div>
         </div>
       </section>
 
