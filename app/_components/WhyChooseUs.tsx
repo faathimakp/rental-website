@@ -64,7 +64,7 @@ export default function WhyChooseUs() {
 
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="flex h-11 md:h-16 w-11 md:w-16 items-center justify-center rounded-xl md:rounded-3xl bg-gradient-to-br from-blue-600 to-slate-900 text-2xl md:text-3xl text-white shadow-2xl">
+                <div className="flex h-11 md:h-16 w-11 md:w-16 items-center justify-center rounded-xl md:rounded-3xl bg-[#134e7a] text-2xl md:text-3xl text-white shadow-2xl">
                   {item.icon}
                 </div>
 

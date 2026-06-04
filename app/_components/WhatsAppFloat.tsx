@@ -68,7 +68,7 @@ export default function FloatingContact() {
       {/* Main Button */}
       <button
         onClick={() => setOpen(!open)}
-        className={`flex h-16 w-16 items-center justify-center rounded-full text-3xl text-white shadow-[0_10px_30px_rgba(37,99,235,0.35)] transition duration-300 hover:scale-110 ${
+        className={`flex h-16 w-16 items-center justify-center rounded-full text-3xl text-white shadow-lg transition duration-300 hover:scale-110 ${
           open
             ? "bg-slate-900"
             : "bg-gradient-to-r from-blue-600 to-sky-500"

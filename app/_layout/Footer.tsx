@@ -1,24 +1,24 @@
-import {
-  FaInstagram,
-  FaWhatsapp,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/10 bg-[#0f172a] py-12">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-[#002c50] py-12">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.18),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(59,130,246,0.12),transparent_30%)]" />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 text-center lg:flex-row lg:px-12 lg:text-left">
         {/* Logo */}
-        <div>
-          <h3 className="text-3xl font-black text-white font-sans">
-            Roa
-            <span className="bg-gradient-to-r from-blue-400 to-sky-300 bg-clip-text text-transparent">
-              M
-            </span>
-          </h3>
-        </div>
+        <Link href="/">
+          <Image
+            src="/logoofooter.png"
+            alt="Roam Kannur"
+             width={240}
+            height={80}
+            className="h-15 md:h-18 w-auto object-contain"
+            priority
+          />
+        </Link>
 
         {/* Connect Us */}
         <div className="flex flex-col items-center gap-4 ">
@@ -56,9 +56,8 @@ export default function Footer() {
 
         {/* Copyright */}
         <div className="text-sm text-slate-500">
-          © 2026{" "}
-          <span className="font-semibold text-white">RoaM</span>. All rights
-          reserved.
+          © 2026 <span className="font-semibold text-white">RoaM</span>. All
+          rights reserved.
         </div>
       </div>
     </footer>

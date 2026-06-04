@@ -1,6 +1,3 @@
-import {
-  CheckCircleIcon,
-} from "@heroicons/react/24/solid";
 
 export default function Testimonials() {
   const reviews = [
@@ -23,48 +20,11 @@ export default function Testimonials() {
         "I booked  access 125cc for my 2day kannur trip. It was great. scooty was in a decent condition",
     },
   ];
-   const terms = [
- 
-  "Fuel costs are not included in the rental price.",
- 
-  "Original Driving License and valid ID proof are required at pickup.",
-  "Late returns beyond the agreed time will incur additional charges.",
-  "Any damage to the vehicle will be charged as per actual repair cost.",
-  "One helmet is provided per booking. Additional helmets are available on request.",
-  "All rental rates include applicable GST.",
-  "Anyone with a valid driving license can rent vehicles below 150cc. Minimum age: 21 years for bikes above 150cc and 23 years for bikes above 350cc.",
-  "Full rental amount must be paid in advance along with a refundable security deposit.",
-];
 
   return (
     <>
-     
-      <section className="bg-gradient-to-br from-blue-500/10 via-transparent to-slate-900/40 py-16 md:py-24">
-     
-             {/* Terms & Conditions */}
-
-      
-          <div className="mx-auto max-w-7xl px-6 lg:px-12">
-            <div className="mb-12  overflow-hidden rounded-[32px] border border-slate-200 bg-blue-50 shadow-xl">
-              <div className="border-l-4 border-blue-600 bg-sky-100 px-6 py-5 md:px-8">
-                <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
-                  Rental Terms & Conditions
-                </h2>
-              </div>
-    
-              <div className="space-y-5 p-6 md:p-8">
-                {terms.map((term, index) => (
-                  <div key={index} className="flex gap-4">
-                    <CheckCircleIcon className="mt-1 h-6 w-6 flex-shrink-0 text-blue-600" />
-                    <p className="text-base leading-7 text-slate-700">{term}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div >
-      
-
-       {/* Testimonials */}
+      <section className="bg-gradient-to-br from-blue-500/10 via-transparent to-slate-900/40 py-10 md:py-24">
+        {/* Testimonials */}
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="mb-16 text-center">
             <div className="flex justify-center px-4">
@@ -109,7 +69,7 @@ export default function Testimonials() {
                 </p>
 
                 <div className=" mt-4 md:mt-8 flex items-center gap-3 md:gap-4">
-                  <div className="flex h-9 w-9 md:h-14 md:w-14 items-center justify-center rounded-full bg-gradient-to-r bg-sky-600 text-shadow-lg md:text-lg font-bold text-white">
+                  <div className="flex h-9 w-9 md:h-14 md:w-14 items-center justify-center rounded-full bg-gradient-to-r bg-[#002c50] text-shadow-lg md:text-lg font-bold text-white">
                     {review.name.charAt(0)}
                   </div>
 
@@ -126,23 +86,23 @@ export default function Testimonials() {
               </div>
             ))}
           </div>
-        <div className="mt-10 md:mt-14 flex justify-center">
-  <a
-    href="https://www.google.com/search?num=10&sca_esv=a4f5fd6faf7ec072&sxsrf=ANbL-n4rpqN-VHIjP88fvWZL02UYGRyzRw:1780400556731&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZxKMu_6d5GlZEnLQXobvfQQ55wpO3qItSQTMvHDkDZN3Q8wtLubxGOiSPy3KKDhaT-cKssygl-mjXQJySWuBHsFmmFkEnRspQXQlNXV00Wz389kC66iRWedgzt_PZrwu8lyaWA%3D&q=Roam+kannur+bike+%26+scooter+rentals+in+kannur+Reviews&sa=X&ved=2ahUKEwilq_f1vOiUAxXre2wGHT0UI4wQ0bkNegQIQxAF&biw=1470&bih=798&dpr=2"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center gap-2 rounded-full border border-sky-600 bg-white px-6 py-3 font-semibold text-sky-600 shadow-sm transition-all duration-300 hover:bg-sky-600 hover:text-white hover:shadow-lg"
-  >
-    View All Google Reviews
-    <span>→</span>
-  </a>
-</div>
+          <div className="mt-8 md:mt-14 flex justify-center">
+            <a
+              href="https://www.google.com/search?num=10&sca_esv=a4f5fd6faf7ec072&sxsrf=ANbL-n4rpqN-VHIjP88fvWZL02UYGRyzRw:1780400556731&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOZxKMu_6d5GlZEnLQXobvfQQ55wpO3qItSQTMvHDkDZN3Q8wtLubxGOiSPy3KKDhaT-cKssygl-mjXQJySWuBHsFmmFkEnRspQXQlNXV00Wz389kC66iRWedgzt_PZrwu8lyaWA%3D&q=Roam+kannur+bike+%26+scooter+rentals+in+kannur+Reviews&sa=X&ved=2ahUKEwilq_f1vOiUAxXre2wGHT0UI4wQ0bkNegQIQxAF&biw=1470&bih=798&dpr=2"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-[#002c50] bg-white px-6 py-3 font-semibold text-[#002c50] shadow-sm transition-all duration-300 hover:bg-[#002c50] hover:text-white hover:shadow-lg"
+            >
+              View All Google Reviews
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </section>
 
       {/* map */}
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62868.43384806196!2d76.2673042!3d9.9312328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d3e5f5f5f5f%3A0x1234567890abcdef!2sKochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+        src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d15618.553384672203!2d75.42281855!3d11.86056895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m1!2shttps%3A%2F%2Fwww.google.com%2Fmaps%2Fdir%2F%2FKannur%2C%2BPadanapalam%2C%2BKannur%2C%2BKerala%2B670001%2F%4011.8605689%2C75.4228186%2C15z%2Fdata%3D*214m8*214m7*211m0*211m5*211m1*211s0x3ba43d34fa25fb8f%3A0x1f50700d9f68d967*212m2*211d75.3680734*212d11.8718394%3Fentry%3Dttu%26g_ep%3DEgoyMDI2MDYwMS4wIKXMDSoASAFQAw%253D%253D!4m5!1s0x3ba43d34fa25fb8f%3A0x1f50700d9f68d967!2sKannur%2C%20Padanapalam%2C%20Kannur%2C%20Kerala%20670001!3m2!1d11.871839399999999!2d75.3680734!5e0!3m2!1sen!2sin!4v1780547879266!5m2!1sen!2sin"
         width="100%"
         height="400"
         loading="lazy"
