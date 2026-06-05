@@ -46,20 +46,20 @@ export default function Cards({
             </h2>
           </div>
 
-          {/* {showButton && (
+          {showButton && (
             <Link href="/showcase">
-              <button className="rounded-full border border-[#002c50] bg-blue-50 px-4 md:px-6 py-1.5 md:py-3 text-sm font-semibold text-[#002c50] transition hover:bg-[#002c50] hover:text-white">
+              <button className=" md:hidden block rounded-full border border-[#002c50] bg-blue-50 px-4 md:px-6 py-1.5 md:py-3 text-sm font-semibold text-[#002c50] transition hover:bg-[#002c50] hover:text-white">
                 explore all Vehicles
               </button>
             </Link>
-          )} */}
+          )}
         </div>
 
-        <div className="mt-6 md:mt-12 grid gap-6 md:gap-8 lg:grid-cols-3">
+        <div className="mt-6 md:mt-12 flex gap-4 overflow-x-auto no-scrollbar pb-4 md:grid md:gap-8 lg:grid-cols-3 md:overflow-visible">
           {Vehicles.map((Vehicle) => (
             <div
               key={Vehicle.id}
-              className="group overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)]"
+              className="group w-[280px] flex-shrink-0 overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)] md:w-auto"
             >
               <div className="relative overflow-hidden bg-sky-100">
                 <img
@@ -116,17 +116,26 @@ export default function Cards({
             </div>
           ))}
         </div>
-        {showButton && (
-        <div className="mt-8 md:mt-14 flex justify-center">
-          <Link
-            href="/showcase"
-            className="inline-flex items-center gap-2 rounded-full border border-[#002c50] bg-white px-6 py-3 font-semibold text-[#002c50] shadow-sm transition-all duration-300 hover:bg-[#002c50] hover:text-white hover:shadow-lg"
-          >
-            explore all Vehicles
-            <span>→</span>
-          </Link>
+        <div className="mt-5 flex items-center justify-center text-slate-400 md:hidden">
+          <span className="text-lg">←</span>
+
+          <span className="mx-4 text-[11px] font-medium uppercase tracking-[0.35em]">
+            Swipe to Explore
+          </span>
+
+          <span className="text-lg">→</span>
         </div>
-         )}
+        {showButton && (
+          <div className="mt-8 md:mt-14 md:flex hidden justify-center">
+            <Link
+              href="/showcase"
+              className="inline-flex items-center gap-2 rounded-full border border-[#002c50] bg-white px-6 py-3 font-semibold text-[#002c50] shadow-sm transition-all duration-300 hover:bg-[#002c50] hover:text-white hover:shadow-lg"
+            >
+              explore all Vehicles
+              <span>→</span>
+            </Link>
+          </div>
+        )}
       </section>
 
       <BookingModal

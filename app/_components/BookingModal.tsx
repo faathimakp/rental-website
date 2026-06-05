@@ -25,6 +25,7 @@ export default function BookingModal({
 }: BookingModalProps) {
   const [vehicleName, setVehicleName] = useState("");
   const [pickupDate, setPickupDate] = useState("");
+  const minDateTime = new Date().toISOString().slice(0, 16);
 
   useEffect(() => {
     const vehicle = Vehicles.find((v) => v.id === selectedVehicleId);
@@ -198,14 +199,15 @@ export default function BookingModal({
                   Pick Up Date
                 </label>
 
-                <input
-                  name="Pickup Date"
-                  type="date"
-                  required
-                  value={pickupDate}
-                  onChange={(e) => setPickupDate(e.target.value)}
-                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
-                />
+               <input
+  name="Pickup Date & Time"
+  type="datetime-local"
+  
+  required
+  value={pickupDate}
+  onChange={(e) => setPickupDate(e.target.value)}
+  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 outline-none transition focus:border-blue-500 focus:bg-white sm:h-16 sm:px-5 sm:text-base"
+/>
               </div>
 
               {/* Return Date */}
@@ -214,14 +216,14 @@ export default function BookingModal({
                   Return Date
                 </label>
 
-                <input
-                  name="Return Date"
-                  type="date"
-                  required
-                  min={pickupDate}
-                  disabled={!pickupDate}
-                  className="h-14 w-full text-slate-900 rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm outline-none transition focus:border-blue-500 focus:bg-white disabled:cursor-not-allowed disabled:bg-slate-100 sm:h-16 sm:px-5 sm:text-base"
-                />
+               <input
+  name="Return Date & Time"
+  type="datetime-local"
+  required
+  min={minDateTime}
+  disabled={!pickupDate}
+  className="h-14 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-sm text-slate-900 outline-none transition focus:border-blue-500 focus:bg-white disabled:cursor-not-allowed disabled:bg-slate-100 sm:h-16 sm:px-5 sm:text-base"
+/>
               </div>
 
               {/* Location */}

@@ -56,12 +56,12 @@ export default function MonthlyCards() {
           </p> */}
         </div>
 
-        <div className="grid gap-6 md:gap-8 lg:grid-cols-3">
+       <div className="flex gap-4 overflow-x-auto no-scrollbar pb-4 no-scrollbar md:grid md:gap-8 lg:grid-cols-3 md:overflow-visible">
           {monthlyVehicles.map((vehicle) => (
-            <div
-              key={vehicle.id}
-              className="group overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)]"
-            >
+           <div
+  key={vehicle.id}
+  className="group w-[280px] flex-shrink-0 overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)] md:w-auto"
+>
               <div className="relative overflow-hidden bg-sky-100">
                 <img
                   src={vehicle.image}
@@ -117,6 +117,13 @@ export default function MonthlyCards() {
             </div>
           ))}
         </div>
+        <div className="mt-4 flex items-center justify-center gap-3 text-slate-400 md:hidden">
+  <span className="text-lg">←</span>
+  <span className="text-[11px] font-medium uppercase tracking-[0.35em]">
+    Swipe to Explore
+  </span>
+  <span className="text-lg">→</span>
+</div>
       </section>
 
       <BookingModal

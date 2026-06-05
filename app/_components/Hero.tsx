@@ -37,14 +37,14 @@ export default function Hero({ Vehicles }: HeroProps) {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.25),transparent_35%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.2),transparent_35%)]" />
 
         {/* Content */}
-        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-between gap-12 md:gap-16 px-6 py-32 lg:flex-row lg:items-center lg:px-12">
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-between gap-8 md:gap-16 px-6 py-32 ">
           {/* Left */}
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 md:gap-3 rounded-full border border-white/10 bg-white/10 px-3 md:px-5 py-1 md:py-2 text-sm text-white backdrop-blur-xl">
-              ⚡ Fast Booking • Premium Electric Vehicles
+          <div className="max-w-2xl lg:flex-row  lg:items-center lg:px-12">
+            <div className="inline-flex items-center gap-2 md:gap-3 rounded-full border border-white/10 bg-white/10 px-3 md:px-5 py-1  text-sm text-white backdrop-blur-xl">
+              ⚡ PREMIUM TWO - WHEELER RENTALS
             </div>
 
-            <h1 className="mt-8 text-6xl font-black leading-[0.95] tracking-tight text-white sm:text-7xl lg:text-8xl font-normal">
+            <h1 className="mt-8 text-[44px] md:text-[68px] lg:text-[78px] font-black leading-[1.02] text-balance  tracking-tight text-white sm:text-7xl lg:text-8xl font-display">
               Ride Beyond
               <span className="bg-gradient-to-r from-blue-500 via-sky-400 to-white bg-clip-text text-transparent">
                 {" "}
@@ -58,7 +58,7 @@ export default function Hero({ Vehicles }: HeroProps) {
             </p>
 
             <div className="mt-8 ">
-               {/* <button
+              {/* <button
                
                 className="rounded-2xl bg-gradient-to-r text-white px-8 py-4 text-lg font-bold bg-sky-600 shadow-[0_0_40px_rgba(37,99,235,0.35)] transition hover:scale-105"
               >
@@ -66,44 +66,89 @@ export default function Hero({ Vehicles }: HeroProps) {
               </button> */}
               <button
                 onClick={() => setOpen(true)}
-                className=" rounded-xl md:rounded-2xl bg-gradient-to-r bg-[#0da5fb] text-white px-6 md:px-8 py-2 md:py-4 text-lg font-bold text-white shadow-[0_0_40px_rgba(37,99,235,0.35)] transition hover:scale-105"
+                className="
+    inline-flex items-center gap-2
+    rounded-full
+    px-4 md:px-8 h-13
+    text-white font-bold text-xl
+    bg-gradient-to-r
+    from-[#041c5a]
+    via-[#0a3dba]
+    to-[#3b82f6]
+    
+    hover:-translate-y-0.5
+    transition-all duration-300
+  "
               >
-               Rent Now
+                Rent Now
+                <span className="text-2xl">→</span>
               </button>
             </div>
-          </div>
-
-          {/* Right Cards */}
-          <div className="flex flex-col gap-6">
-            <div className=" w-[250px] md:w-[300px] rounded-[32px] border border-white/10 bg-white/10 p-4 md:p-8 backdrop-blur-2xl">
-              <div className="flex items-center justify-between">
+            <section className="mt-8 border-t border-white/10 pt-4">
+              <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
                 <div>
-                  <p className="text-sm text-slate-300">Support</p>
-                  <h3 className="mt-2 text-5xl font-black text-white">
-                    24/7
-                  </h3>
+                  <p className="text-2xl font-semibold text-white">12k+</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                    Happy Riders
+                  </p>
                 </div>
 
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#0f172a] text-3xl">
-                  ☎️
+                <div>
+                  <p className="text-2xl font-semibold text-white">4.9★</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                    Avg. Rating
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-2xl font-semibold text-white">120+</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                    Bikes In Fleet
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-2xl font-semibold text-white">24/7</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                    Support
+                  </p>
                 </div>
               </div>
-
-              <p className="mt-6 leading-7 text-slate-200">
-                Round-the-clock customer assistance for all your rides.
-              </p>
-            </div>
-
-            <div className="w-[250px] md:w-[300px] rounded-[32px] border border-white/10 bg-white/10 p-4 md:p-8 backdrop-blur-2xl">
-              <p className="text-sm text-slate-300">Available Vehicles</p>
-
-              <h3 className="mt-2 text-5xl font-black text-white">20+</h3>
-
-              <p className="mt-6 leading-7 text-slate-200">
-                Premium electric Vehicles ready for instant booking.
-              </p>
-            </div>
+            </section>
           </div>
+          {/* Brands */}
+          <section className=" mt-6 md:mt-10  border-white/10 pt-4 overflow-hidden">
+            <p className="mb-6 text-center text-xs uppercase tracking-[0.35em] text-white/50">
+              Trusted Partners & Fleet Brands
+            </p>
+
+            <div className="mx-auto max-w-5xl overflow-hidden">
+              <div className="flex w-max animate-marquee items-center gap-12 tracking-tight whitespace-nowrap text-[18px] font-display  text-white/55">
+                {[
+                  "Vespa",
+                  "KTM",
+                  "Royal Enfield",
+                  "Honda",
+                  "Suzuki",
+                  "TVS",
+                  "Bajaj",
+                  "Yamaha",
+                  "Vespa",
+                  "KTM",
+                  "Royal Enfield",
+                  "Honda",
+                  "Suzuki",
+                  "TVS",
+                  "Bajaj",
+                  "Yamaha",
+                ].map((brand, index) => (
+                  <span key={index} className="transition hover:text-white">
+                    {brand}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </section>
         </div>
       </section>
 

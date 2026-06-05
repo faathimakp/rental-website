@@ -4,6 +4,7 @@ import Hero from "./_components/Hero";
 import MonthlyCards from "./_components/MonthlyCards";
 import Terms from "./_components/Terms";
 import Testimonials from "./_components/Testimonials";
+import TopBar from "./_components/TopBar";
 import WhatsAppFloat from "./_components/WhatsAppFloat";
 import WhyChooseUs from "./_components/WhyChooseUs";
 
@@ -68,8 +69,9 @@ export default function HomePage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f4f7fb] text-[#0f172a]">
       {/* Background Effects */}
+      <TopBar/>
       <div className="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,rgba(37,99,235,0.18),transparent_30%),radial-gradient(circle_at_bottom_left,rgba(15,23,42,0.12),transparent_35%)]" />
-
+   
       <Hero Vehicles={Vehicles} />
       <Cards Vehicles={Vehicles} title="Choose Your Ride" showButton />
       <MonthlyCards />

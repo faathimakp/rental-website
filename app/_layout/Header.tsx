@@ -1,51 +1,175 @@
+
 // import Link from "next/link";
+// import Image from "next/image";
+// import { FiChevronRight } from "react-icons/fi";
 
 // export default function Header() {
 //   return (
-//     <header className="fixed top-0 z-50 w-full border-b border-slate-200 bg-white/70 backdrop-blur-xl shadow-2xl">
-//       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-12">
-//         <h3 className="text-3xl font-black text-black font-sans">
-//            Roa
-//             <span className="bg-gradient-to-r from-blue-400 to-sky-300 bg-clip-text text-transparent">
-//             M
-//             </span>
-//           </h3>
+//     <header className="fixed top-0 z-50 w-full border-b border-slate-200 bg-white shadow-lg">
+//       <div className="mx-auto flex max-w-7xl items-center justify-between px-6  py-2 lg:px-12">
+//         {/* Logo */}
+//         <Link href="/">
+//           <Image
+//             src="/headerlogoo.png"
+//             alt="Roam Kannur"
+//             width={240}
+//             height={80}
+//             className="h-15 md:h-18 w-auto object-contain"
+//             priority
+//           />
+//         </Link>
 
-//        <Link href={"/showcase"}>
-//             <button className="rounded-full font-normal border border-blue-700 bg-blue-50 px-3.5 md:px-6 py-1.5 md:py-3 text-sm font-semibold text-blue-700 transition hover:bg-blue-700 hover:text-white">
-//               Book Ride
-//             </button>
-//        </Link>
+//         {/* Button */}
+//         <Link href="/showcase">
+//          <button
+                
+//                 className="
+//     inline-flex items-center gap-1
+//     rounded-full
+//     px-4 md:px-6 h-11
+//     text-white font-bold text-lg
+//     bg-gradient-to-r
+//     from-[#041c5a]
+//     via-[#0a3dba]
+//     to-[#3b82f6]
+    
+//     hover:-translate-y-0.5
+//     transition-all duration-300
+//   "
+//               >
+//   <span>Book a ride</span>
+//   <FiChevronRight size={24} />
+// </button>
+//         </Link>
 //       </div>
 //     </header>
 //   );
 // }
+
+
+
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  FiChevronRight,
+  FiMapPin,
+  FiPhone,
+} from "react-icons/fi";
 
 export default function Header() {
-  return (
-    <header className="fixed top-0 z-50 w-full border-b border-slate-200 bg-white shadow-lg">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6  py-2 lg:px-12">
-        {/* Logo */}
-        <Link href="/">
-          <Image
-            src="/headerlogoo.png"
-            alt="Roam Kannur"
-            width={240}
-            height={80}
-            className="h-15 md:h-18 w-auto object-contain"
-            priority
-          />
-        </Link>
+  const [showTopBar, setShowTopBar] = useState(true);
 
-        {/* Button */}
-        <Link href="/showcase">
-          <button className="rounded-full font-normal border border-[#002c50] bg-blue-50 px-3.5 md:px-6 py-1.5 md:py-3 text-sm font-semibold text-[#002c50] transition hover:bg-[#002c50] hover:text-white">
-            Book Ride
-          </button>
-        </Link>
+  useEffect(() => {
+    let lastScroll = 0;
+
+    const handleScroll = () => {
+      const currentScroll = window.scrollY;
+
+      // Hide top bar while scrolling down
+      if (currentScroll > lastScroll && currentScroll > 50) {
+        setShowTopBar(false);
+      } else {
+        // Show again when scrolling up
+        setShowTopBar(true);
+      }
+
+      lastScroll = currentScroll;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () =>
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+  }, []);
+
+  return (
+    <>
+      {/* Top blue bar */}
+      <div
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+          showTopBar
+            ? "translate-y-0"
+            : "-translate-y-full"
+        }`}
+      >
+        <div className="h-12 bg-gradient-to-r from-[#002c50] via-[#0f4c81] to-[#001d36] text-white">
+          <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 lg:px-12 text-sm">
+
+            {/* Left section */}
+            <div className="flex items-center gap-6">
+
+              <div className="flex items-center gap-2">
+                <FiMapPin size={15} />
+                <span>Kannur · Kerala · India</span>
+              </div>
+
+              <div className="hidden md:flex items-center gap-2">
+                <FiPhone size={15} />
+                <span>+91 81119 54096</span>
+              </div>
+
+            </div>
+
+            {/* Right section */}
+            <div className="hidden md:flex items-center gap-2 uppercase opacity-90 tracking-[0.18px]">
+              <span className="h-2 w-2 rounded-full bg-cyan-300"></span>
+              <span>Ride with comfort</span>
+              <FiChevronRight size={16} />
+            </div>
+
+          </div>
+        </div>
       </div>
-    </header>
+
+      {/* Main Header */}
+      <header
+        className={`fixed left-0 z-40 w-full border-b border-slate-200 bg-white shadow-lg transition-all duration-300 ${
+          showTopBar ? "top-12" : "top-0"
+        }`}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-12">
+
+          {/* Logo */}
+          <Link href="/">
+            <Image
+              src="/headerlogoo.png"
+              alt="Roam Kannur"
+              width={240}
+              height={80}
+              className="h-15 md:h-18 w-auto object-contain"
+              priority
+            />
+          </Link>
+
+          {/* Button */}
+          <Link href="/showcase">
+            <button
+              className="
+                md:inline-flex hidden items-center gap-1
+                rounded-full
+                px-4 md:px-6 h-11
+                text-white font-bold text-lg
+                bg-gradient-to-r
+                from-[#041c5a]
+                via-[#0a3dba]
+                to-[#3b82f6]
+                hover:-translate-y-0.5
+                transition-all duration-300
+              "
+            >
+              <span>Book a ride</span>
+              <FiChevronRight size={24} />
+            </button>
+          </Link>
+
+        </div>
+      </header>
+    </>
   );
 }
