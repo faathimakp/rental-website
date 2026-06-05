@@ -40,7 +40,7 @@ export default function Hero({ Vehicles }: HeroProps) {
         <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col justify-between gap-8 md:gap-16 px-6 py-32 ">
           {/* Left */}
           <div className="max-w-2xl lg:flex-row  lg:items-center lg:px-12">
-            <div className="inline-flex items-center gap-2 md:gap-3 rounded-full border border-white/10 bg-white/10 px-3 md:px-5 py-1  text-sm text-white backdrop-blur-xl">
+            <div className="inline-flex items-center gap-2 md:gap-3 rounded-full border border-white/10 bg-white/10 px-3 md:px-5 py-1  text-[12px] md:text-sm text-white backdrop-blur-xl">
               ⚡ PREMIUM TWO - WHEELER RENTALS
             </div>
 
@@ -52,7 +52,7 @@ export default function Hero({ Vehicles }: HeroProps) {
               </span>
             </h1>
 
-            <p className=" mt-6 md:mt-8 max-w-xl text-lg leading-7 md:leading-8 text-slate-200 font-normal">
+            <p className=" mt-6 md:mt-8 max-w-x text-[16px] md:text-lg leading-5.5 md:leading-8 text-slate-200 font-normal">
               Experience premium electric Vehicle rentals with comfort,
               performance, and instant booking for modern urban travel.
             </p>
@@ -69,8 +69,8 @@ export default function Hero({ Vehicles }: HeroProps) {
                 className="
     inline-flex items-center gap-2
     rounded-full
-    px-4 md:px-8 h-13
-    text-white font-bold text-xl
+    px-4 md:px-8 h-10 md:h-13
+    text-white font-bold text-[15px] md:text-xl
     bg-gradient-to-r
     from-[#041c5a]
     via-[#0a3dba]
@@ -81,13 +81,13 @@ export default function Hero({ Vehicles }: HeroProps) {
   "
               >
                 Rent Now
-                <span className="text-2xl">→</span>
+                <span className=" text-[16px] md:text-2xl">→</span>
               </button>
             </div>
             <section className="mt-8 border-t border-white/10 pt-4">
               <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
                 <div>
-                  <p className="text-2xl font-semibold text-white">12k+</p>
+                  <p className="text-2xl font-semibold text-white">5k+</p>
                   <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
                     Happy Riders
                   </p>
@@ -101,7 +101,7 @@ export default function Hero({ Vehicles }: HeroProps) {
                 </div>
 
                 <div>
-                  <p className="text-2xl font-semibold text-white">120+</p>
+                  <p className="text-2xl font-semibold text-white">25+</p>
                   <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
                     Bikes In Fleet
                   </p>
@@ -117,28 +117,26 @@ export default function Hero({ Vehicles }: HeroProps) {
             </section>
           </div>
           {/* Brands */}
-          <section className=" mt-6 md:mt-10  border-white/10 pt-4 overflow-hidden">
+          <section className=" mt-2 md:mt-6  border-white/10 pt-4 overflow-hidden">
             <p className="mb-6 text-center text-xs uppercase tracking-[0.35em] text-white/50">
-              Trusted Partners & Fleet Brands
+              Built For Every Journey
             </p>
 
             <div className="mx-auto max-w-5xl overflow-hidden">
               <div className="flex w-max animate-marquee items-center gap-12 tracking-tight whitespace-nowrap text-[18px] font-display  text-white/55">
                 {[
                   "Vespa",
-                  "KTM",
+                  "TVS",
                   "Royal Enfield",
                   "Honda",
                   "Suzuki",
-                  "TVS",
                   "Bajaj",
                   "Yamaha",
                   "Vespa",
-                  "KTM",
+                  "TVS",
                   "Royal Enfield",
                   "Honda",
                   "Suzuki",
-                  "TVS",
                   "Bajaj",
                   "Yamaha",
                 ].map((brand, index) => (

@@ -98,33 +98,29 @@ export default function Header() {
             : "-translate-y-full"
         }`}
       >
-        <div className="h-12 bg-gradient-to-r from-[#002c50] via-[#0f4c81] to-[#001d36] text-white">
-          <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6 lg:px-12 text-sm">
+       <div className="h-12 bg-gradient-to-r from-[#002c50] via-[#0f4c81] to-[#001d36] text-white">
+  <div className="mx-auto flex h-full max-w-7xl items-center justify-center px-6 text-sm">
 
-            {/* Left section */}
-            <div className="flex items-center gap-6">
+    <div className="flex items-center gap-4 md:gap-8">
 
-              <div className="flex items-center gap-2">
-                <FiMapPin size={15} />
-                <span>Kannur · Kerala · India</span>
-              </div>
+      {/* Location */}
+      <div className="flex items-center gap-2">
+        <FiMapPin size={13} />
+        <span>Kannur · Kerala · India</span>
+      </div>
 
-              <div className="hidden md:flex items-center gap-2">
-                <FiPhone size={15} />
-                <span>+91 81119 54096</span>
-              </div>
+     
 
-            </div>
+      {/* Phone - hidden on mobile */}
+      <div className="hidden md:flex items-center gap-2">
+        <FiPhone size={15} />
+        <span>+91 92490 56412</span>
+      </div>
 
-            {/* Right section */}
-            <div className="hidden md:flex items-center gap-2 uppercase opacity-90 tracking-[0.18px]">
-              <span className="h-2 w-2 rounded-full bg-cyan-300"></span>
-              <span>Ride with comfort</span>
-              <FiChevronRight size={16} />
-            </div>
+    </div>
 
-          </div>
-        </div>
+  </div>
+</div>
       </div>
 
       {/* Main Header */}
@@ -133,7 +129,7 @@ export default function Header() {
           showTopBar ? "top-12" : "top-0"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-12">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 lg:px-12">
 
           {/* Logo */}
           <Link href="/">
@@ -148,14 +144,14 @@ export default function Header() {
           </Link>
 
           {/* Button */}
-          <Link href="/showcase">
+          <Link href="#Vehicle-showcase">
             <button
               className="
-                md:inline-flex hidden items-center gap-1
+                inline-flex  items-center gap-1
                 rounded-full
-                px-4 md:px-6 h-11
-                text-white font-bold text-lg
-                bg-gradient-to-r
+                px-3 md:px-6 h-10 md:h-11
+                text-white font-bold text-[15px] md:text-lg
+                bg-[#032d95]
                 from-[#041c5a]
                 via-[#0a3dba]
                 to-[#3b82f6]
@@ -164,7 +160,7 @@ export default function Header() {
               "
             >
               <span>Book a ride</span>
-              <FiChevronRight size={24} />
+               {/* <FiChevronRight size={24} /> */}
             </button>
           </Link>
 

@@ -37,7 +37,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://wa.me/+919526452995"
+              href="https://wa.me/+919249056412"
               target="_blank"
               rel="noopener noreferrer"
               className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white backdrop-blur-xl transition hover:scale-110 hover:bg-green-500"
@@ -46,7 +46,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="tel:+91 95264 52995"
+              href="tel:+91 92490 56412"
               className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 text-xl text-white backdrop-blur-xl transition hover:scale-110 hover:bg-blue-500"
             >
               <FaPhoneAlt />

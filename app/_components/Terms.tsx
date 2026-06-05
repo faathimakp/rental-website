@@ -20,17 +20,17 @@ export default function Terms() {
 
         <div className="mx-auto max-w-7xl px-6 lg:px-12">
           <div className="  overflow-hidden rounded-[32px] border border-slate-200 bg-blue-50 shadow-xl">
-            <div className="border-l-4 border-blue-600 bg-sky-100 px-6 py-5 md:px-8">
-              <h2 className="text-2xl font-bold text-slate-900 md:text-3xl">
+            <div className="border-l-4 border-blue-600 bg-sky-100 px-6 py-6.5 md:py-5 md:px-8">
+              <h2 className="text-[17px]  leading-1.5 font-bold text-slate-900 md:text-3xl">
                 Rental Terms & Conditions
               </h2>
             </div>
 
-            <div className="space-y-5 p-6 md:p-8">
+            <div className=" space-y-3 md:space-y-5 p-4 md:p-8">
               {terms.map((term, index) => (
-                <div key={index} className="flex gap-4">
-                  <CheckCircleIcon className="mt-1 h-6 w-6 flex-shrink-0 text-[#002c50]" />
-                  <p className="text-base leading-7 text-slate-700">{term}</p>
+                <div key={index} className="flex gap-1.5 md:gap-4">
+                  <CheckCircleIcon className="mt-1 size-4.5  md:size-6  flex-shrink-0 text-[#002c50]" />
+                  <p className=" text-[13px] md:text-base leading-5 md:leading-7 text-slate-700">{term}</p>
                 </div>
               ))}
             </div>

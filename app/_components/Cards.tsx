@@ -9,6 +9,7 @@ interface Vehicle {
   name: string;
   status: string;
   price: string;
+  deposit: string;
   image: string;
 }
 
@@ -32,10 +33,10 @@ export default function Cards({
   return (
     <>
       <section
-        className="mx-auto max-w-7xl px-6  py-14 md:py-20 lg:px-12 font-normal"
+        className="mx-auto max-w-7xl   py-14 md:py-20 lg:px-12 font-normal"
         id="Vehicle-showcase"
       >
-        <div className="flex flex-col items-start justify-between gap-4 md:gap-8 lg:flex-row lg:items-end">
+        <div className="flex flex-col  px-6 items-start justify-between gap-4 md:gap-8 lg:flex-row lg:items-end">
           <div>
             <span className="rounded-full  border border-[#002c50] bg-blue-50 px-4 py-2 text-sm font-medium text-[#002c50]">
               Premium Fleet
@@ -55,7 +56,7 @@ export default function Cards({
           )}
         </div>
 
-        <div className="mt-6 md:mt-12 flex gap-4 overflow-x-auto no-scrollbar pb-4 md:grid md:gap-8 lg:grid-cols-3 md:overflow-visible">
+        <div className="mt-6 md:mt-12 flex gap-4 pl-6 md:pl-0  overflow-x-auto no-scrollbar pb-4 md:grid md:gap-8 lg:grid-cols-3 md:overflow-visible">
           {Vehicles.map((Vehicle) => (
             <div
               key={Vehicle.id}
@@ -80,15 +81,23 @@ export default function Cards({
               </div>
 
               <div className=" p-4 md:p-6 ">
-                <div className="flex items-center justify-between gap-4">
-                  <h3 className=" text-xl md:text-2xl font-black text-slate-900">
-                    {Vehicle.name}
-                  </h3>
+               <div className="flex items-start justify-between gap-4">
+  <h3 className="text-xl md:text-2xl font-black text-slate-900">
+    {Vehicle.name}
+  </h3>
 
-                  <span className="rounded-full bg-gradient-to-r from-[#0056a3] via-[#004b8a] to-[#003d71] px-2 md:px-3 py-1 md:py-1.5 text-xs font-bold text-white shadow-lg">
-                    {Vehicle.price}
-                  </span>
-                </div>
+  <div className="flex flex-col items-end gap-2">
+
+    <span className="rounded-full bg-gradient-to-r from-[#0056a3] via-[#004b8a] to-[#003d71] px-2 md:px-3 py-1 md:py-1.5 text-xs font-bold text-white shadow-lg">
+      {Vehicle.price}
+    </span>
+
+    <span className="rounded-full bg-slate-100 px-2 md:px-3 py-1 text-[11px] font-semibold text-slate-600 whitespace-nowrap">
+      Deposit: {Vehicle.deposit}
+    </span>
+
+  </div>
+</div>
 
                 <p className="mt-4 text-sm leading-5 md:leading-7 text-slate-500">
                   Designed for comfort, performance, and smooth urban commuting.
