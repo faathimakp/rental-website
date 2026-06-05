@@ -113,10 +113,10 @@ export default function ShowcasePage() {
   return (
     <div className="md:pt-[120px] pt-[100px]">
       <Cards
-        Vehicles={Vehicles}
-        title="Premium Vehicle Fleet"
-        enableMobileScroll={false}
-      />
+  Vehicles={Vehicles}
+  title="Premium Vehicle Fleet"
+  enableMobileScroll={false}
+/>
 
       <div className="">
        <MonthlyCards enableMobileScroll={false} />

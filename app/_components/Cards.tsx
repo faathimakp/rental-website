@@ -63,13 +63,18 @@ export default function Cards({
   ${
     enableMobileScroll
       ? "flex overflow-x-auto no-scrollbar pl-6 md:pl-0 md:grid lg:grid-cols-3 md:overflow-visible"
-      : "grid px-6 md:px-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+      : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center px-6 md:px-0"
   }`}
->          {Vehicles.map((Vehicle) => (
+>
+         {Vehicles.map((Vehicle) => (
             <div
               key={Vehicle.id}
-              className="group w-[280px] flex-shrink-0 overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)] md:w-auto"
-            >
+className={`group overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)]
+${
+  enableMobileScroll
+    ? "w-[280px] flex-shrink-0 md:w-auto"
+    : "w-[280px] md:w-auto"
+}`}            >
               <div className="relative overflow-hidden bg-sky-100">
                 <img
                   src={Vehicle.image}
