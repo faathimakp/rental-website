@@ -17,12 +17,14 @@ interface CardsProps {
   Vehicles: Vehicle[];
   title: string;
   showButton?: boolean;
+  enableMobileScroll?: boolean;
 }
 
 export default function Cards({
   Vehicles,
   title,
   showButton = false,
+  enableMobileScroll = true,
 }: CardsProps) {
   const [open, setOpen] = useState(false);
 
@@ -56,8 +58,14 @@ export default function Cards({
           )}
         </div>
 
-        <div className="mt-6 md:mt-12 flex gap-4 pl-6 md:pl-0  overflow-x-auto no-scrollbar pb-4 md:grid md:gap-8 lg:grid-cols-3 md:overflow-visible">
-          {Vehicles.map((Vehicle) => (
+<div
+  className={`mt-6 md:mt-12 gap-4 pb-4 md:gap-8
+  ${
+    enableMobileScroll
+      ? "flex overflow-x-auto no-scrollbar pl-6 md:pl-0 md:grid lg:grid-cols-3 md:overflow-visible"
+      : "grid px-6 md:px-0 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+  }`}
+>          {Vehicles.map((Vehicle) => (
             <div
               key={Vehicle.id}
               className="group w-[280px] flex-shrink-0 overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)] md:w-auto"
