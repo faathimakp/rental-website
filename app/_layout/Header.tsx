@@ -144,7 +144,7 @@ export default function Header() {
           </Link>
 
           {/* Button */}
-          <Link href="#Vehicle-showcase">
+          <Link href="/showcase">
             <button
               className="
                 inline-flex  items-center gap-1
