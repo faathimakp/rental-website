@@ -57,7 +57,7 @@ export default function Hero({ Vehicles }: HeroProps) {
               performance, and instant booking for modern urban travel.
             </p>
 
-            <div className="mt-8 ">
+            <div className="mt-8  flex items-center gap-x-16">
               {/* <button
                
                 className="rounded-2xl bg-gradient-to-r text-white px-8 py-4 text-lg font-bold bg-sky-600 shadow-[0_0_40px_rgba(37,99,235,0.35)] transition hover:scale-105"
@@ -83,34 +83,41 @@ export default function Hero({ Vehicles }: HeroProps) {
                 Rent Now
                 <span className=" text-[16px] md:text-2xl">→</span>
               </button>
+              <div>
+                  <p className="text-2xl font-semibold text-white/70">24/7</p>
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
+                    Support
+                  </p>
+                </div>
             </div>
             <section className="mt-8 border-t border-white/10 pt-4">
               <div className="flex flex-wrap items-center gap-x-10 gap-y-4">
                 <div>
-                  <p className="text-2xl font-semibold text-white">5k+</p>
+                  <p className="text-2xl font-semibold text-white/70">5k+</p>
                   <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
                     Happy Riders
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-2xl font-semibold text-white">4.9★</p>
+                  <p className="text-2xl font-semibold text-white/70">4.9★</p>
                   <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
                     Avg. Rating
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-2xl font-semibold text-white">25+</p>
+                  <p className="text-2xl font-semibold text-white/70">25+</p>
                   <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
                     Bikes In Fleet
                   </p>
                 </div>
 
+                
                 <div>
-                  <p className="text-2xl font-semibold text-white">24/7</p>
+                  <p className="text-2xl md:text-3xl font-semibold text-white/70">∞</p>
                   <p className="text-[10px] uppercase tracking-[0.25em] text-white/60">
-                    Support
+                    Unlimited KM 
                   </p>
                 </div>
               </div>

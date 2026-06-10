@@ -51,30 +51,31 @@ export default function Cards({
 
           {showButton && (
             <Link href="/showcase">
-              <button className=" md:hidden block rounded-full border border-[#002c50] bg-blue-50 px-4 md:px-6 py-1.5 md:py-3 text-sm font-semibold text-[#002c50] transition hover:bg-[#002c50] hover:text-white">
+              <button className=" md:hidden block rounded-full border border-[#002c50] bg-blue-50 px-4 md:px-6  py-1.5 md:py-3 text-sm font-semibold text-[#002c50] transition hover:bg-[#002c50] hover:text-white">
                 explore all Vehicles
               </button>
             </Link>
           )}
         </div>
 
-<div
-  className={`mt-6 md:mt-12 gap-4 pb-4 md:gap-8
+        <div
+          className={`mt-6 md:mt-12 gap-4 pb-4 md:gap-8
   ${
     enableMobileScroll
       ? "flex overflow-x-auto no-scrollbar pl-6 md:pl-0 md:grid lg:grid-cols-3 md:overflow-visible"
       : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center px-6 md:px-0"
   }`}
->
-         {Vehicles.map((Vehicle) => (
+        >
+          {Vehicles.map((Vehicle) => (
             <div
               key={Vehicle.id}
-className={`group overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)]
+              className={`group overflow-hidden rounded-[30px] border border-slate-200 bg-white/80 backdrop-blur-xl transition duration-300 hover:-translate-y-2 hover:border-blue-400 hover:shadow-[0_20px_50px_rgba(37,99,235,0.12)]
 ${
   enableMobileScroll
     ? "w-[280px] flex-shrink-0 md:w-auto"
     : "w-[280px] md:w-auto"
-}`}            >
+}`}
+            >
               <div className="relative overflow-hidden bg-sky-100">
                 <img
                   src={Vehicle.image}
@@ -94,23 +95,21 @@ ${
               </div>
 
               <div className=" p-4 md:p-6 ">
-               <div className="flex items-start justify-between gap-4">
-  <h3 className="text-xl md:text-2xl font-black text-slate-900">
-    {Vehicle.name}
-  </h3>
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-xl md:text-2xl font-black text-slate-900">
+                    {Vehicle.name}
+                  </h3>
 
-  <div className="flex flex-col items-end gap-2">
+                  <div className="flex flex-col items-end gap-2">
+                    <span className="rounded-full bg-gradient-to-r from-[#0056a3] via-[#004b8a] to-[#003d71] px-2 md:px-3 py-1 md:py-1.5 text-xs font-bold text-white shadow-lg">
+                      {Vehicle.price}
+                    </span>
 
-    <span className="rounded-full bg-gradient-to-r from-[#0056a3] via-[#004b8a] to-[#003d71] px-2 md:px-3 py-1 md:py-1.5 text-xs font-bold text-white shadow-lg">
-      {Vehicle.price}
-    </span>
-
-    <span className="rounded-full bg-slate-100 px-2 md:px-3 py-1 text-[11px] font-semibold text-slate-600 whitespace-nowrap">
-      Deposit: {Vehicle.deposit}
-    </span>
-
-  </div>
-</div>
+                    <span className="rounded-full bg-slate-100 px-2 md:px-3 py-1 text-[11px] font-semibold text-slate-600 whitespace-nowrap">
+                      Deposit: {Vehicle.deposit}
+                    </span>
+                  </div>
+                </div>
 
                 <p className="mt-4 text-sm leading-5 md:leading-7 text-slate-500">
                   Designed for comfort, performance, and smooth urban commuting.

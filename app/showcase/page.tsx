@@ -7,10 +7,10 @@ const Vehicles = [
     id: 1,
     name: "Suzuki access 125",
     status: "Available",
-    price: "₹799/day",
+    price: "₹899/day",
      deposit: "₹2500",
     image:
-      "/suzukigreen.png",
+      "/suzuki-new.png",
   },
   {
     id: 2,
@@ -51,17 +51,9 @@ const Vehicles = [
     image:
       "/royalclassic.png",
   },
+  
   {
     id: 6,
-    name: "Suzuki access 125 White",
-    status: "Available",
-    price: "₹799/day",
-     deposit: "₹2500",
-    image:
-      "/suzukiwhite.png",
-  },
-  {
-    id: 7,
     name: "Honda Unicorn",
     status: "Not Available",
     price: "₹999/day",
@@ -71,7 +63,7 @@ const Vehicles = [
   },
  
   {
-    id: 8,
+    id: 7,
     name: "Bajaj NS",
     status: "Not Available",
     price: "₹999/day",
@@ -79,34 +71,7 @@ const Vehicles = [
     image:
       "bajajns.png",
   },
-   {
-    id: 9,
-    name: "Suzuki access 125",
-    status: "Available",
-    price: "₹799/day",
-     deposit: "₹2500",
-    image:
-       "/suzukiblack.png",
-  },
-  
-  {
-    id: 10,
-    name: "Suzuki access 125 Green",
-    status: "Available",
-    price: "₹799/day",
-     deposit: "₹2500",
-    image:
-       "/suzukiblack.png",
-  },
-  {
-    id: 11,
-    name: "Suzuki access 125 Green",
-    status: "Available",
-    price: "₹799/day",
-     deposit: "₹2500",
-    image:
-       "/suzukigreen.png",
-  },
+   
   
 ];
 export default function ShowcasePage() {
@@ -118,7 +83,7 @@ export default function ShowcasePage() {
   enableMobileScroll={false}
 />
 
-      <div className="">
+      <div className="" id="monthly-showcase">
        <MonthlyCards enableMobileScroll={false} />
       </div>
     </div>

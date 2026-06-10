@@ -2,16 +2,17 @@
 
 import { useState } from "react";
 import BookingModal from "./BookingModal";
+import Link from "next/link";
 
 const monthlyVehicles = [
   {
     id: 1,
     name: "Suzuki access  ",
     status: "Available",
-    price: "₹12,999/month",
+    price: "₹8999/month",
     deposit: "₹2500",
 
-    image: "/suzukigreen.png",
+    image: "/suzuki-new.png",
   },
   {
     id: 2,
@@ -49,7 +50,7 @@ const monthlyVehicles = [
     id: 6,
     name: "Royal enfield classic",
     status: "Available",
-    price: " 12,499/month",
+    price: " 12499/month",
     deposit: "₹2500",
     image: "/royalclassic.png",
   },
@@ -65,9 +66,11 @@ const monthlyVehicles = [
 
 interface MonthlyCardsProps {
   enableMobileScroll?: boolean;
+  showButton?: boolean;
 }
 
 export default function MonthlyCards({
+  showButton = false,
   enableMobileScroll = true,
 }: MonthlyCardsProps) {
   const [open, setOpen] = useState(false);
@@ -78,7 +81,7 @@ export default function MonthlyCards({
   return (
     <>
       <section className="mx-auto max-w-7xl  pb-16 md:pb-20 lg:px-12">
-        <div className="mb-7 md:mb-12 px-6">
+        {/* <div className="mb-7 md:mb-12 px-6">
           <span className="rounded-full border border-[#002c50] bg-blue-50 px-4 py-2 text-sm font-medium text-[#002c50]">
             Monthly Rentals
           </span>
@@ -86,11 +89,36 @@ export default function MonthlyCards({
           <h2 className="mt-6 text-3xl md:text-5xl font-black text-slate-900 ">
             Monthly Rental Plans
           </h2>
-
-          {/* <p className="mt-2 md:mt-4 max-w-2xl text-slate-600 ">
+        {showButton && (
+            <Link href="/showcase">
+              <button className="mt-6 md:hidden block rounded-full border border-[#002c50] bg-blue-50 px-4 md:px-6 py-1.5 md:py-3 text-sm font-semibold text-[#002c50] transition hover:bg-[#002c50] hover:text-white">
+                explore all Vehicles
+              </button>
+            </Link>
+          )}
+           <p className="mt-2 md:mt-4 max-w-2xl text-slate-600 ">
             Affordable monthly bike and scooter rentals for work, study, and
             long-term travel.
-          </p> */}
+          </p>
+        </div>  */}
+         <div className="flex flex-col  px-6 items-start justify-between gap-4 md:gap-8 lg:flex-row lg:items-end">
+          <div>
+            <span className="rounded-full  border border-[#002c50] bg-blue-50 px-4 py-2 text-sm font-medium text-[#002c50]">
+             Monthly Rentals
+            </span>
+
+            <h2 className="mt-4 md:mt-6 text-3xl md:text-5xl font-black text-slate-900">
+              Monthly Rental Plans
+            </h2>
+          </div>
+
+          {showButton && (
+            <Link href="/showcase#monthly-showcase">
+              <button className=" md:hidden block rounded-full border border-[#002c50] bg-blue-50 px-4 md:px-6  py-1.5 md:py-3 text-sm font-semibold text-[#002c50] transition hover:bg-[#002c50] hover:text-white">
+                explore all Vehicles
+              </button>
+            </Link>
+          )}
         </div>
 
 <div
@@ -176,8 +204,23 @@ export default function MonthlyCards({
     </span>
 
     <span className="text-lg">→</span>
+
   </div>
 )}
+
+{showButton && (
+          <div className="mt-8  md:flex hidden justify-center">
+            <Link
+              href="/showcase#monthly-showcase"
+              className="inline-flex items-center gap-2 rounded-full border border-[#002c50] bg-white px-6 py-3 font-semibold text-[#002c50] shadow-sm transition-all duration-300 hover:bg-[#002c50] hover:text-white hover:shadow-lg"
+            >
+              explore all Vehicles
+              <span>→</span>
+            </Link>
+          </div>
+        )}
+  
+
       </section>
 
       <BookingModal

@@ -14,10 +14,10 @@ const Vehicles = [
     id: 1,
     name: "Suzuki access 125",
     status: "Available",
-    price: "₹799/day",
+    price: "₹899/day",
      deposit: "₹2500",
     image:
-      "/suzukigreen.png",
+      "/suzuki-new.png",
   },
   
   {
@@ -82,7 +82,7 @@ export default function HomePage() {
    
       <Hero Vehicles={Vehicles} />
       <Cards Vehicles={Vehicles} title="Choose Your Ride" showButton />
-      <MonthlyCards />
+      <MonthlyCards showButton/>
       <WhyChooseUs />
       <Terms />
       <Cta />
